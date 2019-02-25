@@ -3,15 +3,15 @@ config nudgePercentOf screenSize
 config resizePercentOf screenSize
 
 # Monitor Aliases
-alias mainscreen 2880x1800
+alias mainscreen 1680x1050
 alias secondscreen 1920x1080
 
 # Grabkey
 alias monkey ctrl;alt;cmd
 
 # Position Aliases
-alias left-side     corner top-left resize:screenSizeX/3.8;screenSizeY
-alias right-side    corner top-right resize:screenSizeX/1.358;screenSizeY
+alias left-side     corner top-left resize:screenSizeX/2.0;screenSizeY
+alias right-side    corner top-right resize:screenSizeX/2.0;screenSizeY
 alias full-screen   corner top-right resize:screenSizeX;screenSizeY
 alias center-screen move   screenOriginX+(screenSizeX/2-(screenSizeX*0.35));screenOriginY+(screenSizeY/2-(screenSizeY*0.35))  screenSizeX*0.7;screenSizeY*0.7
 alias center-small  move   screenOriginX+screenSizeX/4;screenOriginY+screenSizeY/8   3*screenSizeX/6;3*screenSizeY/4
@@ -31,11 +31,6 @@ bind h:${monkey} ${left-side}
 bind l:${monkey} ${right-side}
 
 # Automatic Layouts
-layout 2monitors 'iTerm'         ${center-screen}
-layout 2monitors 'Sarafi'        ${full-screen}
-layout 2monitors 'Spotify'       ${center-small}
-layout 2monitors 'Slack'         ${center-screen}
-layout 2monitors 'Xcode'         ${full-screen}
 layout 1monitors 'Google Chrome' ${center-screen}
 
 layout 1monitors 'iTerm'         ${full-screen}
@@ -44,8 +39,6 @@ layout 1monitors 'Spotify'       ${center-screen}
 layout 1monitors 'Sarafi'        ${full-screen}
 layout 1monitors 'Xcode'         ${full-screen}
 
-default 2monitors resolutions:${mainscreen};${secondscreen}
 default 1monitors resolutions:${mainscreen}
 
 bind return:${monkey} layout 1monitors
-bind m:${monkey} layout 2monitors
