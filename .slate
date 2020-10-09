@@ -32,8 +32,10 @@ alias right-column  move   screenOriginX+screenSizeX/3.8+screenSizeX/1.358/2;scr
 
 alias small-right-bottom corner bottom-right resize:screenSizeX/4.0;screenSizeY/3.0
 
-alias whatsapp      move   screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2   4*screenSizeX/12;4*screenSizeY/12
-alias telegram      move   screenOriginX+screenSizeX/6;screenOriginY+screenSizeY/2   4*screenSizeX/12;4*screenSizeY/12
+alias bottom-right-small     move   screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2   4*screenSizeX/12;4*screenSizeY/12
+alias bottom-left-small      move   screenOriginX+screenSizeX/6;screenOriginY+screenSizeY/2   4*screenSizeX/12;4*screenSizeY/12
+alias top-right-small        move   screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/6   4*screenSizeX/12;4*screenSizeY/12
+alias top-left-small         move   screenOriginX+screenSizeX/6;screenOriginY+screenSizeY/6   4*screenSizeX/12;4*screenSizeY/12
 
 # Move Windows
 bind right:${monkey}  push right bar-resize:screenSizeX/2
@@ -44,15 +46,16 @@ bind down:${monkey}   ${middle-column}
 # Manual Layout Bindings
 bind k:${monkey} ${full-screen}
 bind j:${monkey} ${center-screen}
-bind m:${monkey} ${whatsapp}
-bind n:${monkey} ${telegram}
+bind m:${monkey} ${bottom-right-small}
+bind n:${monkey} ${bottom-left-small}
+bind b:${monkey} ${top-right-small}
+bind v:${monkey} ${top-left-small}
 bind h:${monkey} ${left-side}
 bind l:${monkey} ${right-side}
 bind o:${monkey} ${quarter-top-right-screen}
 bind p:${monkey} ${quarter-bottom-right-screen}
 bind u:${monkey} ${quarter-top-left-screen}
 bind i:${monkey} ${quarter-bottom-left-screen}
-bind b:${monkey} ${small-center}
 bind 7:${monkey} ${small-center-left-top}
 bind 8:${monkey} ${small-center-left-bottom}
 bind 9:${monkey} ${small-center-right-top}
